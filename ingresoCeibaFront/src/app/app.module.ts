@@ -1,25 +1,35 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { BookService } from './shared/book.service';
+import { BookService } from './shared/service/book.service';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
-import { SaveBookComponent } from './save-book/save-book.component';
+import { SaveBookComponent } from './book/save-book/save-book.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {AppMaterialModule } from './app-material.module';
+import { ListBookComponent } from './book/list-book/list-book.component';
+import { MenuComponent } from './shared/menu/menu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
-    SaveBookComponent
+    SaveBookComponent,
+    ListBookComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    BookService
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    AppMaterialModule,
+    FormsModule  
   ],
-  providers: [],
+  providers: [
+    {provide:BookService}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,18 @@
+<div class="container wrapper wrapper2">
+    <div class="row">
+        <mat-toolbar color="primary">
+            <span>Sistema de bibliotecas conocimiento infinito</span>
+            <div class="container">
+            </div>
+        </mat-toolbar>
+
+        <button mat-button [matMenuTriggerFor]="aboveMenu">Libros</button>
+        <mat-menu #aboveMenu="matMenu" yPosition="above">
+            <button mat-menu-item (click)="listStock()">Stock</button>
+            <button mat-menu-item (click)="listBook()">Titulos</button>
+        </mat-menu>
+        <button mat-button (click)="listPresta()">Prestamos</button>           
+        <button mat-button (click)="listUser()">Usuarios</button>
+        
+    </div>
+</div>
