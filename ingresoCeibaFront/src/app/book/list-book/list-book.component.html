@@ -1,7 +1,25 @@
 <app-menu></app-menu>
-<mat-card layout="row" layout-align="center center">
+<div style="text-align:center">
+    <h2>Libros</h2>    
+</div>
+<div *ngFor='let book of bookArr'>
+    <mat-card layout="row" layout-align="center center">
+        <mat-card-title>{{ book.book_nombre | uppercase }}</mat-card-title>
+        <mat-card-subtitle>
+            <p>{{ book.book_isbn }}</p>
+        </mat-card-subtitle>
+        <mat-card-content>
+
+        </mat-card-content>
+       
+    </mat-card>
+</div>
+
+
+
+<!--<mat-card layout="row" layout-align="center center">
     <mat-card-title>Stock</mat-card-title>
-    <mat-card-content>
+    <mat-card-content >
         <p>Los libros</p>
     </mat-card-content>
-</mat-card>
+</mat-card>-->

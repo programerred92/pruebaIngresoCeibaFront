@@ -1,0 +1,14 @@
+[
+    {
+      "book_isbn": "P0001",
+      "book_nombre": "Cien años de soledad"
+    },
+    {
+      "book_isbn": "P0002",
+      "book_nombre": "El mundo de sofia"
+    },
+    {
+      "book_isbn": "P0003",
+      "book_nombre": "La rebelion de las ratas"
+    }
+  ]

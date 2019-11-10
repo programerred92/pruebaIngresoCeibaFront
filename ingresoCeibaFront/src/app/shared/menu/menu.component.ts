@@ -19,10 +19,13 @@ export class MenuComponent implements OnInit {
   listBook(){
     this.router.navigate(['/listBook']);
   }
+  saveBook(){
+    this.router.navigate(['/saveBook']);
+  }
   listPresta(){
     this.router.navigate(['/listPresta']);
   }
   listUser(){
-    this.router.navigate(['/listUser']);
+    this.router.navigate(['/listPerson']);
   }
 }

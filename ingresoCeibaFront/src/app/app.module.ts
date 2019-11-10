@@ -10,13 +10,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {AppMaterialModule } from './app-material.module';
 import { ListBookComponent } from './book/list-book/list-book.component';
 import { MenuComponent } from './shared/menu/menu.component';
+import { TitleBookComponent } from './book/title-book/title-book.component';
+import { ListPersonComponent } from './person/list-person/list-person.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SaveBookComponent,
     ListBookComponent,
-    MenuComponent
+    MenuComponent,
+    TitleBookComponent,
+    ListPersonComponent
   ],
   imports: [
     BrowserModule,

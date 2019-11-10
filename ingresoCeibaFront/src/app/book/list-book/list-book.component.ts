@@ -1,8 +1,11 @@
-import { Component, OnInit, NgZone } from '@angular/core';
+import { Component, OnInit, NgZone  } from '@angular/core';
 import { BookService } from '../../shared/service/book.service';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder } from '@angular/forms';
 import { MenuComponent } from '../../shared/menu/menu.component';
 import { Router } from '@angular/router';
+import { TitleBookComponent } from '../title-book/title-book.component';
+import { Libro } from 'src/app/libro';
+
 
 @Component({
   selector: 'app-listbook',
@@ -17,12 +20,19 @@ export class ListBookComponent implements OnInit {
     private ngZone: NgZone,
     private router: Router,
     private bookService: BookService) { }
-
+    
   ngOnInit() {
     this.getBooks();
   }
   getBooks() {
-    return this.bookService.GetBooks;
+    this.bookService.GetBooks().subscribe(
+      (data)=>{
+        this.bookArr = data;
+      },
+      (error) => {
+        console.error(error);
+      }
+    );
   }
 
   
