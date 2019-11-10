@@ -35,5 +35,15 @@ export class ListBookComponent implements OnInit {
     );
   }
 
-  
+  updateBook(){
+    this.bookService.UpdateBook().subscribe(
+      (data)=>{
+        this.bookArr = data;
+      },
+      (error) => {
+        console.error(error);
+      }
+    );
+  }
+  deleteBook(){}
 }

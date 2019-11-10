@@ -1,1 +1,17 @@
-<p>title-book works!</p>
+<app-menu></app-menu>
+<div style="text-align:center">
+    <h2>Usuarios</h2>
+</div>
+
+<div *ngFor='let book of books'>
+    <mat-card layout="row" layout-align="center center">
+        <mat-card-title>{{ book.name.first | uppercase }}</mat-card-title>
+        <mat-card-subtitle>
+            <p>{{ person.email }}</p>
+        </mat-card-subtitle>
+        <mat-card-content>
+
+        </mat-card-content>
+        <img [src]="person.picture.medium">
+    </mat-card>
+</div>

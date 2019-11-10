@@ -12,6 +12,8 @@ import { ListBookComponent } from './book/list-book/list-book.component';
 import { MenuComponent } from './shared/menu/menu.component';
 import { TitleBookComponent } from './book/title-book/title-book.component';
 import { ListPersonComponent } from './person/list-person/list-person.component';
+import { CreatePrestamoComponent } from './prestamo/create-prestamo/create-prestamo.component';
+import { ListPrestamoComponent } from './prestamo/list-prestamo/list-prestamo.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { ListPersonComponent } from './person/list-person/list-person.component'
     ListBookComponent,
     MenuComponent,
     TitleBookComponent,
-    ListPersonComponent
+    ListPersonComponent,
+    CreatePrestamoComponent,
+    ListPrestamoComponent
   ],
   imports: [
     BrowserModule,

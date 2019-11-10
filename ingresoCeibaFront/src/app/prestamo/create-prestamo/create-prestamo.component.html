@@ -1,0 +1,28 @@
+<app-menu></app-menu>
+<mat-card layout="row" layout-align="center center">
+    <mat-card-title>Creando prestamo</mat-card-title>
+    <mat-card-content>
+        <form class="example-form" [formGroup]="prestamoForm" (ngSubmit)="submitForm()">
+            <br>
+            <mat-form-field>
+                <input matInput [matDatepicker]="prestamo" placeholder="Fecha de prestamo"
+                    formControlName="fecha_prestamo">
+                <mat-datepicker-toggle matSuffix [for]="prestamo"></mat-datepicker-toggle>
+                <mat-datepicker #prestamo></mat-datepicker>
+            </mat-form-field>
+            <br>
+            <mat-form-field>
+                <input matInput [matDatepicker]="picker" placeholder="Fecha de entrega"
+                 formControlName="fecha_entrega">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+            <br>
+            <mat-form-field class="example-full-width">
+                <input matInput placeholder="Ingresa el ISBN del libro" formControlName="id_libro">
+            </mat-form-field>
+            <br>
+            <button mat-button type="submit" color="primary">Guardar</button>
+        </form>
+    </mat-card-content>
+</mat-card>

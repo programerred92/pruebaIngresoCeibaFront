@@ -4,11 +4,11 @@
     <mat-card-content>
         <form class="example-form" [formGroup]="bookForm" (ngSubmit)="submitForm()">
             <mat-form-field class="example-full-width">
-                <input matInput placeholder="Ingresa el ISBN del libro" formControlName="book_isbn">
+                <input matInput placeholder="Ingresa el ISBN del libro" formControlName="isbn">
             </mat-form-field>
 
             <mat-form-field class="example-full-width">
-                <input matInput placeholder="Ingresa el nombre del libro" formControlName="book_nombre">
+                <input matInput placeholder="Ingresa el nombre del libro" formControlName="nombre">
             </mat-form-field>
             <button mat-button type="submit" color="primary">Guardar</button>
         </form>

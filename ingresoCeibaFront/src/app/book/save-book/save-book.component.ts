@@ -26,14 +26,20 @@ export class SaveBookComponent implements OnInit {
 
   addBook() {
     this.bookForm = this.fb.group({
-      book_isbn: ['', Validators.required],
-      book_nombre: ['', Validators.required]
+      isbn: ['', Validators.required],
+      nombre: ['', Validators.required]
     })
   }
 
   submitForm() {
-    console.log('llego aca '+this.bookForm.value.book_isbn+' y '+this.bookForm.value.book_nombre)
+    console.log('llego aca '+this.bookForm.value.isbn+' y '+this.bookForm.value.nombre)
     this.bookService.CreateBook(this.bookForm.value)
+    .subscribe(data => {
+      console.log("POst ok", data);
+    },
+    error=>{
+console.log("error: ",error)
+    });
       //this.bookService.CreateBook(this.bookForm.value).subscribe(res => {
       //console.log('book added!')
       //this.ngZone.run(() => this.router.navigateByUrl('/saveBook'))

@@ -25,6 +25,9 @@ export class MenuComponent implements OnInit {
   listPresta(){
     this.router.navigate(['/listPresta']);
   }
+  createPresta(){
+    this.router.navigate(['/createPresta']);
+  }
   listUser(){
     this.router.navigate(['/listPerson']);
   }
